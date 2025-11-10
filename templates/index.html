@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Romina 5 - Recuerdos Espaciales 🚀</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="stars-bg">
+  <div class="main-flex">
+    <div class="banner-boov">
+      <img src="{{ url_for('static', filename='img/boov_banner.jpg') }}" alt="Banner Boov" class="banner-img">
+    </div>
+    <div class="container">
+      <!-- Imagen decorativa de Boov en la cabecera -->
+      <img src="{{ url_for('static', filename='img/boov1.png') }}" alt="Boov personaje" class="boov-header">
+      <h1 class="title"> Bienvenidos Terrícolas y Boovs 🚀</h1>
+      <h2 class="subtitle">¡Prepárense para la diversión galáctica!</h2>
+
+      <p class="desc">📸 Sube tus recuerdos espaciales para formar parte de la misión <strong>ROMINA</strong> 💫</p>
+
+      <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+        <input type="file" name="file" required>
+        <button type="submit"><img src="{{ url_for('static', filename='img/boov_icon.png') }}" alt="Boov icon" class="icon-btn"> Subir Foto 🌠</button>
+      </form>
+
+      <a href="{{ url_for('gallery') }}" class="btn-gallery">🌌 Ver Galería Espacial</a>
+    </div>
+  </div>
+</body>
+</html>

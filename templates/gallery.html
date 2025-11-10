@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería Espacial - Romina 5 🚀</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="stars-bg">
+  <div class="container">
+    <h1 class="title">🌌 Galería Espacial de Romina</h1>
+    <p class="desc">✨ Aquí están los recuerdos de todos los terrícolas y Boovs 👽</p>
+
+    <div class="gallery">
+      {% for image in images %}
+        <div class="photo-card">
+          <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Foto Espacial">
+        </div>
+      {% else %}
+        <p class="no-photos">Aún no hay fotos... ¡Sé el primero en subir una! 🚀</p>
+      {% endfor %}
+    </div>
+
+    <a href="{{ url_for('index') }}" class="btn-gallery">Volver al portal de subida</a>
+  </div>
+</body>
+</html>

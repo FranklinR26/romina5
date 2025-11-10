@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.Python
+node_modules/
+
+# dotenv
+.env
+
+# VS Code
+.vscode/
+
+# system
+.DS_Store
+Thumbs.db
+
+# uploads local (no subir)
+static/uploads/

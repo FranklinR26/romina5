@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body.stars-bg {
+  background: radial-gradient(circle at 20% 20%, #200040, #000010 80%);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  background: rgba(30, 0, 50, 0.85);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(120, 0, 255, 0.5);
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+  flex: 1 1 50%;
+  margin-left: -50px; /* Junta el texto con la imagen */
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #a3d9ff;
+  text-shadow: 0 0 10px #5ab9ea, 0 0 20px #5ab9ea;
+}
+
+.subtitle {
+  color: #ffb6ff;
+  margin-top: -10px;
+  text-shadow: 0 0 6px #ff77e9;
+}
+
+.desc {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.upload-form {
+  margin-top: 2rem;
+}
+
+.upload-form input[type="file"] {
+  background-color: #25004a;
+  border: 2px solid #a3d9ff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.upload-form button {
+  margin-top: 15px;
+  background-color: #6c00ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.upload-form button:hover {
+  background-color: #a400ff;
+  box-shadow: 0 0 20px #a400ff;
+}
+
+.btn-gallery {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: #0099ff;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-gallery:hover {
+  background-color: #00d9ff;
+  box-shadow: 0 0 15px #00d9ff;
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.photo-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(150, 0, 255, 0.3);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-photos {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 30px;
+}
+
+/* Banner Boov más grande y junto al texto */
+.main-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 0;
+}
+
+.banner-boov {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 0;
+}
+
+.banner-img {
+  width: 700px;
+  max-width: 48vw;
+  height: 480px;
+  max-height: 80vh;
+  border-radius: 25px 0 0 25px;
+  box-shadow: 0 0 50px #5ab9ea99;
+  object-fit: cover;
+  object-position: left;
+}
+
+/* Imagen decorativa Boov en cabecera */
+.boov-header {
+  width: 90px;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(0 0 10px #a3d9ff);
+}
+
+/* Ícono Boov en botón */
+.icon-btn {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 7px;
+  margin-top: -3px;
+}
+
+/* Ajuste para evitar que el botón crezca por la imagen */
+.upload-form button img {
+  display: inline-block;
+}
+
+@media (max-width: 1200px) {
+  .banner-img {
+    width: 90vw;
+    max-width: 100vw;
+    height: auto;
+    border-radius: 25px;
+  }
+  .main-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .container, .banner-boov {
+    margin-left: 0;
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .banner-img {
+    width: 90vw;
+    max-width: 100vw;
+  }
+  .banner-boov {
+    min-height: 40vh;
+    position: static;
+  }
+}
